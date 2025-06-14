@@ -1,0 +1,10 @@
+/* @import "./hidechannel_plus.scss"; */
+.visual-refresh .sidebarList_c48ade {
+  min-width: 0px !important;
+  width: 15px !important;
+  transition: width 0.7s;
+}
+
+.visual-refresh .sidebarList_c48ade:hover {
+  width: 240px !important;
+}

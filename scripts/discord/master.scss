@@ -1,0 +1,1564 @@
+/*
+ * thorn @version 0.0.3
+*/
+
+/* lots of dead css selectors in here but i don't bother going through them */
+
+@import "backend.scss";
+@import "font";
+/* @import "hidechannel.scss"; */
+
+:root {
+  --version: "2.3.0";
+
+  /* Colors */
+  --main-color: $color0;
+
+  /* Borders */
+  --avatar-radius: 20px;
+  --mention-background: border-radius: 60px;
+  --mention-background: #c1423f;
+  --background-floating: $color0 !important;
+}
+
+
+.theme-dark .themed__9293f {
+  background-color: transparent !important;
+}
+.visual-refresh .chatContent_f75fb0 {
+  background-color: transparent !important;
+}
+
+.tooltipContent__382e7 {
+  background-color: mix($color0, $color6, 90%) !important;
+  border-radius: 10px;
+}
+
+/* .chatContent_f75fb0 { */
+/**/
+/*   background-color: rgba(mix($color0, $color6, 90%), 0.8) !important; */
+/* } */
+
+.popoutContainer__0f481 {
+  background-color: mix($color0, $color6, 90%) !important;
+  border-radius: 10px;
+}
+
+.popoutContainer__8641f {
+  background-color: mix($color0, $color6, 90%) !important;
+  border-radius: 10px;
+}
+
+.streamPreview__6da2d {
+  background-color: mix($color0, $color6, 90%) !important;
+  border-radius: 10px;
+}
+
+.form__468a6 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.container__4e30a {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.popout__76f04 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.modalTextContainer__4d95d {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.visual-refresh .appMount__51fd7,
+.visual-refresh body {
+  background-color: transparent !important;
+}
+
+.visual-refresh.theme-darker,
+.visual-refresh .theme-darker {
+  /* --bg-base-tertiary: rgba(30, 30, 30, 0.4) !important; */
+  --bg-base-tertiary: transparent !important;
+  /* --background-primary: rgba(30, 30, 30, 0.4) !important; */
+  --background-primary: transparent !important;
+  --background-secondary: rgba(30, 30, 30, 0.4) !important;
+  /* --background-tertiary: transparent !important; */
+  /* --background-tertiary: rgba(30, 30, 30, 0.4) !important; */
+  /* --bg-base-primary: rgba(30, 30, 30, 0.4) !important; */
+  /* --bg-base-secondary: rgba(30, 30, 30, 0.4) !important; */
+  /* --background-surface-high: rgba(30, 30, 30, 0.4) !important; */
+  /* --background-surface-higher: rgba(30, 30, 30, 0.4) !important; */
+  /* --background-surface-highest: rgba(30, 30, 30, 0.4) !important; */
+  --background-surface-highest: transparent !important;
+  /* --background-base-low: rgba(30, 30, 30, 0.4) !important; */
+  --background-base-low: transparent !important;
+  --background-base-lower: transparent !important;
+  --background-base-lowest: transparent !important;
+  --chat-background-default: transparent !important;
+}
+
+.fade_faf9c0 {
+  border-radius: 10px;
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.recentMentionsPopout__95796 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+/* .chatContent_f75fb0 { */
+/*   background-color: mix($color0, $color6, 90%) !important; */
+/* } */
+
+/* .theme-dark .themed__9293f { */
+/*   background-color: mix($color0, $color6, 90%) !important; */
+/* } */
+
+.messages-3amgkR {
+  background-color: $bg !important;
+}
+
+.panels-j1Uci_,
+.scrollableContainer-2NUZem,
+.scroller-2TZvBN,
+.searchBar-3dMhjb {
+  background-color: $foreground !important;
+}
+
+.theme-dark .rootWithShadow_d20cd6,
+.theme-light .rootWithShadow_d20cd6 {
+  background-color: $color4 !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.theme-dark {
+  /* background-color: $color1; */
+  --colortransparency: #0003;
+
+  /* Cards */
+  --card: #212332;
+
+  /* Other stuff */
+  --textcolor: #fff;
+  --epicshadow1: #fff3;
+  //
+  // /* Font */
+  --background-floating: $color0 !important;
+  --modal-background: var(--background-primary);
+  --font-display: var(--font-primary) !important;
+  --background-color: mix($color11, $color1, 50%) !important;
+  --background-primary: mix($bg, $color1, 50%) !important;
+  --background-secondary: $bg !important;
+  --background-secondary-alt: mix($color0, $color6, 90%) !important;
+  --background-tertiary: mix($color0, $color6, 90%) !important;
+  --background-accent: $colorAccent !important;
+  --text-link: $colorHighlight !important;
+  --focus-primary: $colorUrgent !important;
+  --channeltextarea-background: $bg !important;
+  --activity-card-background: $bg !important;
+  --depreciated-store-bg: $bg !important;
+  --deprecated-quickswitcher-input-background: mix(
+    $color0,
+    $color6,
+    90%
+  ) !important;
+  --deprecated-text-input-border-hover: mix($color0, $color6, 90%) !important;
+  --deprecated-text-input-border-disabled: mix(
+    $color0,
+    $color6,
+    90%
+  ) !important;
+}
+
+//  connection screen
+.container-16j22k {
+  background-color: $bg !important;
+}
+
+.container_f369db {
+  background-color: transparent !important;
+}
+
+//background transparency
+.appMount-3lHmkl,
+body {
+  background-color: rgba(30, 30, 30, 0.4) !important;
+}
+
+// inbox
+.recentMentionsPopout__826a9 {
+  background-color: mix($color0, $color4, 50%) !important;
+}
+
+//  login screen
+.theme-dark.authBox-hW6HRx {
+  background: $bg !important;
+}
+
+.lookLink-9FtZy-.colorBrand-3pXr91 {
+  color: $colorAccent !important;
+}
+
+.input-cIJ7To.focused-1mmYsC,
+.input-cIJ7To:focus {
+  border-color: $colorAccent !important;
+}
+
+//  private call
+.wrapper-2qzCYF.minimum-28Z35l {
+  background-color: $bg !important;
+}
+
+.centerButton-3CaNcJ {
+  background: $bg;
+}
+
+//  channel list
+.container-PNkimc {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+//  discord icon
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9,
+.wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+  background-color: $colorAccent !important;
+}
+
+.item-2hkk8m {
+  background-color: $colorAccent !important;
+}
+
+//  make '#' in front of channels match text color
+.foreground-2W-aJk {
+  fill: $colorUrgent !important;
+}
+
+//  channels with unread messages
+.nameUnreadText-DfkrI4,
+.nameUnreadVoice-EVo-wI {
+  color: $colorUrgent !important;
+}
+
+.numberBadge-2s8kKX {
+  background-color: $colorUrgent !important;
+}
+
+//  default channel style
+.nameDefaultText-24KCy5,
+.nameDefaultVoice-3WUH7s,
+.nameLockedText-3pqQcL,
+.nameLockedVoice-26MhB1 {
+  color: rgba($fg, 0.5) !important;
+}
+
+//  channel group name
+.iconCollapsed-3hFp_8,
+.iconDefault-3Gr8d2,
+.nameCollapsed-34uFWo,
+.nameDefault-2DI02H {
+  color: rgba($fg, 0.7) !important;
+}
+
+//  muted channels
+.nameMutedText-3Vj4bM,
+.nameMutedVoice-3oxyQZ {
+  color: rgba($fg, 0.2) !important;
+}
+
+//  unread channels left dot
+.unread-1Dp-OI {
+  background: $colorUrgent !important;
+}
+
+//  box around select channel
+.contentSelectedText-3wUhMi {
+  background: rgba($colorAccent, 0.2) !important;
+}
+
+//  box on channel hover
+.contentHoveredText-2D9B-x,
+.contentHoveredVoice-3p_NEO:active,
+.contentSelectedVoice-1WDIBM:active {
+  background: rgba($colorAccent, 0.1) !important;
+}
+
+//  voice connected
+.container-1UB9sr {
+  background-color: mix($color0, $color6, 90%) !important;
+  border-bottom: 1px solid rgba($colorHighlight, 0.1) !important;
+}
+
+//  avatar container
+.container-2Thooq {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  //  buttons
+  .horizontal-1ae9ci button {
+    fill: $colorAccent !important;
+  }
+}
+
+//  "New Unreads"
+.unread-1xRYoj {
+  background-color: rgba($colorUrgent, 0.75) !important;
+}
+
+//  textbox margins
+.content,
+.content-yTz4x3 {
+  background-color: $bg !important;
+}
+
+//  input form background
+.inner-zqa7da {
+  background-color: rgba($colorAccent, 0.1) !important;
+}
+
+//  attachment button color
+.attachButtonPlus-rUdX-B {
+  fill: $colorAccent !important;
+}
+
+//  nitro
+//  nitro page
+.scroller-9moviB {
+  background-color: $bg !important;
+}
+
+//  nitro gift button color
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+//  nitro gift popup
+.theme-dark .root-1gCeng {
+  background-color: $bg !important;
+}
+
+.theme-dark .footer-3rDWdC {
+  background-color: $bg !important;
+}
+
+.lookOutlined-3sRXeN.colorBrand-3pXr91 {
+  color: rgba($colorAccent, 0.8) !important;
+  border-color: rgba($colorAccent, 0.2) !important;
+}
+
+//  messages - form separator
+.chat form,
+.chat-3bRxxu form {
+  background-color: $bg !important;
+  box-shadow: 0 -1px 0 rgba($colorHighlight, 0.1) !important;
+}
+
+//  "Load More Messages" button
+.has-more button,
+.hasMore-3e72_v button {
+  background-color: $bg !important;
+  border-color: transparent !important;
+}
+
+.jump-to-present-bar {
+  background-color: rgba($colorHighlight, 0.6) !important;
+}
+
+//  edit message box
+.inner-zqa7da {
+  background-color: rgba($colorHighlight, 0.1) !important;
+}
+
+//  divider is what displays the date for older messages
+.messages .divider,
+.divider-3gKybi {
+  & > span {
+    background-color: $bg !important;
+  }
+
+  &:not(.red) div {
+    background: rgba($colorAccent, 0.3) !important;
+  }
+
+  &:not(.red) span {
+    color: rgba($colorAccent, 0.6) !important;
+  }
+
+  &.divider-red {
+    & > span {
+      color: $colorUrgent !important;
+    }
+
+    & > div {
+      background: $colorUrgent !important;
+    }
+  }
+}
+
+.isUnread-3Ef-o9 {
+  border-color: $colorUrgent !important;
+}
+
+.unreadPill-2HyYtt {
+  background-color: $colorUrgent !important;
+}
+
+.unreadPillCapStroke-7rkHbg {
+  color: $colorUrgent !important;
+  fill: $colorUrgent !important;
+}
+
+//  reaction menu
+.wrapper-2aW0bm {
+  background-color: $bg !important;
+}
+
+//  bar displayed at the top of the messages when there are unread ones
+.new-messages-bar,
+.newMessagesBar-mujexs {
+  background-color: rgba($colorUrgent, 0.9) !important;
+}
+
+// date fix
+.isUnread-3Ef-o9 .content-1o0f9g {
+  color: $fg !important;
+  background-color: $colorUrgent !important;
+}
+
+//  message container
+.messages-wrapper,
+.messagesWrapper-3lZDfY {
+  background-color: $bg !important;
+}
+
+.message-group {
+  // message text
+  .markup,
+  .markup-2BOw-j {
+    color: $fg !important;
+
+    //  for code within single backquotes
+    code.inline {
+      background-color: $bg !important;
+    }
+
+    //  for codeblocks (triple backquotes)
+    pre {
+      code {
+        background-color: $bg !important;
+      }
+
+      border-color: $bg !important;
+    }
+  }
+
+  //  embed cards
+  .embedInner-1-fpTo {
+    background-color: $bg !important;
+  }
+
+  //  message with user mention
+  .mentioned .message-text {
+    background-color: rgba($colorUrgent, 0.1) !important;
+
+    &:after {
+      background: transparent !important;
+      border-left-color: $colorUrgent !important;
+    }
+  }
+}
+
+//  user mention fix
+.wrapper-3WhCwL {
+  color: rgba($colorUrgent, 0.8) !important;
+}
+
+//  mentioned background
+.mentioned-xhSam7 {
+  background-color: rgba($colorUrgent, 0.1) !important;
+}
+
+.mentioned-xhSam7:before {
+  background-color: $colorUrgent !important;
+}
+
+//  users list
+.members-1998pB {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.sidebar-2K8pFh {
+  background: $bg !important;
+}
+
+.selected-aXhQR6 .layout-2DM8Md {
+  background-color: rgba($colorAccent, 0.2) !important;
+}
+
+//  user typing message
+.typing-2GQL18 {
+  background-color: $bg !important;
+}
+
+//  title bar
+.title-3qD0b- {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  .search-bar {
+    background-color: rgba($colorAccent, 0.2) !important;
+  }
+}
+
+.container-1r6BKw.themed-ANHk51 {
+  background: $bg !important;
+}
+
+//  server list
+.guilds-wrapper,
+.guildsWrapper-5TJh6A,
+.wrapper-1Rf91z {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.guilds-add,
+.circleIconButton-jET_ig {
+  border: 1px dashed rgba($colorAccent, 0.3) !important;
+  background: inherit !important;
+  color: rgba($colorAccent, 0.4) !important;
+}
+
+.guild .guild-inner,
+.guild-1EfMGQ .guild-inner,
+.container-2td-dC .wrapper-2lTRaf {
+  background: inherit !important;
+}
+
+.guild.unread:before,
+.guild-1EfMGQ.unread-qLkInr:before,
+.wrapper-232cHJ {
+  background: rgba($colorUrgent, 0.65) !important;
+}
+
+//  n friends online
+.friends-online,
+.friendsOnline-_wi_fM,
+.friendsOnline-2JkivW {
+  color: $colorHighlight !important;
+}
+
+//  server menu
+.menu-Sp6bN1 {
+  background: $bg !important;
+
+  .separator-2zcjq8 {
+    background: rgba($colorAccent, 0.4) !important;
+  }
+}
+
+//  pinned messages
+.messagesPopoutWrap-1MQ1bW {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  //  header
+  .header-ykumBX {
+    background: $bg !important;
+  }
+
+  //  footer
+  .footer-1kmXd4 {
+    background: $bg !important;
+  }
+
+  //  pinned message view
+  .messagesPopout-24nkyi .message-group {
+    @extend .message-group;
+    background-color: $bg !important;
+
+    //  jump
+    .actionButtons-1sUUug .jumpButton-3DTcS_ {
+      background-color: rgba($colorHighlight, 0.6) !important;
+    }
+  }
+}
+
+//  notification
+.iconBadge-qZ4Ksk {
+  background-color: $colorUrgent !important;
+}
+
+//  spinners
+.spinner-wandering-cubes .spinner-item {
+  background-color: $colorAccent !important;
+}
+
+//  app scrollbars
+.scroller-wrap .scroller,
+.scroller-wrap .scroller-2FKFPG,
+.scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG {
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track-piece {
+    border-color: $bg !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $bg !important;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: $bg !important;
+  }
+}
+
+//  firefox scrollbars
+.scrollbar-2rkZSL {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  .track-1JN30G {
+    background-color: mix($color0, $color6, 90%) !important;
+  }
+
+  .pad-29zQak {
+    background-color: mix($color0, $color6, 90%) !important;
+  }
+
+  .thumb-2JwNFC {
+    background-color: rgba($colorAccent, 0.1) !important;
+  }
+}
+
+//  DMs
+//  box around selected chat
+.channel.selected a,
+.channel-2QD9_O.selected-1HYmZZ a {
+  background: rgba($colorAccent, 0.2) !important;
+}
+
+//  box on hover
+.channel:hover a,
+.channel-2QD9_O:hover a {
+  background: rgba($colorAccent, 0.1) !important;
+}
+
+// create dm popup
+.theme-dark .modal-yWgWj- {
+  background-color: $bg !important;
+}
+
+//  friends tab
+#friends,
+.container-3gCOGc {
+  background-color: $bg !important;
+
+  //  title bar
+  .headerBar-UHpsPw {
+    background: mix($color0, $color6, 90%) !important;
+  }
+
+  .friends-table,
+  .friendsTable-133bsv {
+    background-color: $bg !important;
+
+    .friends-row:hover,
+    .friendsRow-2yicud:hover {
+      background-color: rgba($colorHighlight, 0.1) !important;
+    }
+
+    .friends-row,
+    .friendsRow-2yicud {
+      .friends-column-actions .friends-action {
+        background-color: rgba($colorHighlight, 0.1) !important;
+      }
+    }
+
+    .friends-row,
+    .friendsRow-2yicud {
+      .friends-column-actions .friends-action:hover {
+        background-color: rgba($colorHighlight, 0.2) !important;
+      }
+    }
+  }
+}
+
+.scrollerThemed-2oenus.themeDark-2cjlUp .scroller-2FKFPG,
+.theme-dark .scrollerWrap-2lJEkd .scroller-2FKFPG,
+.theme-light .scrollerThemed-2oenus.themeDark-2cjlUp .scroller-2FKFPG {
+  background: $bg !important;
+}
+
+.theme-dark .container-1D34oG {
+  background-color: $bg !important;
+}
+
+//  quick switcher (ctrl + k)
+.quickswitcher-3JagVE {
+  background-color: $bg !important;
+
+  //  input
+  .input-2VB9rf {
+    background-color: rgba($colorAccent, 0.1) !important;
+  }
+
+  //  focused search result
+  .resultFocused-3aIoYe {
+    background-color: rgba($colorAccent, 0.2) !important;
+  }
+
+  .keybindShortcut-1BD6Z1 span {
+    background-color: $colorUrgent !important;
+    box-shadow: inset 0 -4px 0 rgba($colorAccent, 0.6) !important;
+  }
+}
+
+//  search popup with help
+.searchPopout-1vUlP3 {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  //  background on hover
+  .option-96V44q.selected-rZcOL- {
+    background-color: rgba($colorAccent, 0.1) !important;
+  }
+}
+
+.theme-dark .container-3ayLPN {
+  background-color: $bg !important;
+}
+
+.theme-dark .focused-2bY0OD {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.theme-dark .dim-1l4L4y span {
+  background-color: $bg !important;
+}
+
+.theme-dark .option-96V44q.selected-rZcOL- {
+  background-color: mix($color0, $color6, 90%);
+}
+
+.theme-dark .option-96V44q:after {
+  background: linear-gradient(90deg, rgba(54, 57, 63, 0), $bg 80%);
+}
+
+.theme-dark .option-96V44q.selected-rZcOL-:after {
+  background: linear-gradient(
+    90deg,
+    rgba(54, 57, 63, 0),
+    mix($color0, $color6, 90%) 80%
+  );
+}
+
+.theme-dark .elevationBorderHigh-2WYJ09 {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+//  auto-complete popup when mentioning users
+.autocomplete-1vrmpx {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  //  on hover
+  .selectorSelected-1_M1WV {
+    background-color: rgba($colorHighlight, 0.1) !important;
+  }
+}
+
+//  pop-out when clicking on user
+//  header
+.headerPlaying-j0WQBV,
+.headerNormal-T_seeN {
+  background-color: $colorAccent !important;
+}
+
+.body-3iLsc4,
+.footer-1fjuF6 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+//  send dm from popout
+.quickMessage-1yeL4E {
+  background-color: rgba($colorAccent, 0.1) !important;
+}
+
+//  right-click
+.theme-dark.contextMenu-HLZMGh {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  //  things like "Add Reaction"
+  .itemSubMenu-1vN_Yn {
+    background-color: inherit !important;
+  }
+
+  //  divider
+  .itemGroup-1tL0uz {
+    border-color: rgba($colorAccent, 0.05) !important;
+  }
+
+  //  volume slider in user popup
+  .bar-2Qqk5Z {
+    background-color: $bg !important;
+
+    .barFill-23-gu- {
+      background-color: $colorAccent !important;
+    }
+  }
+}
+
+//  search
+.search-results-wrap {
+  background-color: mix($color0, $color6, 90%) !important;
+
+  .search-header {
+    background-color: inherit !important;
+  }
+
+  .channel-separator {
+    .channel-name {
+      background-color: mix($color0, $color6, 90%) !important;
+    }
+
+    &:before {
+      border-color: rgba($colorAccent, 0.2) !important;
+    }
+  }
+
+  .search-result {
+    &:before,
+    &:after {
+      background-image: linear-gradient(
+        0deg,
+        rgba($colorAccent, 0),
+        mix($color0, $color6, 90%)
+      ) !important;
+    }
+
+    &.expanded .search-result-message.hit {
+      background-color: $bg !important;
+      border-bottom: 2px solid $bg !important;
+      border-top: 2px solid $bg !important;
+    }
+
+    .search-result-message.hit {
+      border: 2px solid $bg !important;
+    }
+
+    .hit {
+      background-color: $bg !important;
+      box-shadow: 0 0 10px 6px $bg !important;
+    }
+  }
+
+  .action-buttons .jump-button {
+    background-color: rgba($colorAccent, 0.8) !important;
+  }
+}
+
+//  context menu
+.contextMenu-HLZMGh {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.itemGroup-1tL0uz {
+  border-color: $bg !important;
+}
+
+.colorDefault-2K3EoJ.focused-3afm-j,
+.colorDefault-2K3EoJ:hover:not(.hideInteraction-1iHO1O) {
+  background-color: $colorHighlight !important;
+}
+
+//  new server menu
+.theme-light .action-1lSjCi {
+  background: mix($color0, $color6, 90%) !important;
+}
+
+.header-3ZP1MY {
+  color: #fff !important;
+}
+
+.colorStandard-2KCXvj {
+  color: #dcddde !important;
+}
+
+.sampleLink-KPFu3I {
+  color: $colorHighlight !important;
+}
+
+//  upload menu
+.theme-dark .uploadModal-2ifh8j {
+  background-color: $bg !important;
+}
+
+.theme-dark .footer-3mqk7D {
+  background-color: $bg !important;
+}
+
+// display of uploaded items
+.anchor-3Z-8Bb {
+  color: $colorHighlight !important;
+}
+
+//  gif menu
+.contentWrapper-2txmjs {
+  background-color: $bg !important;
+}
+
+//  favourite tint
+.theme-dark .categoryFadeBlurple-1j72_A,
+.theme-light .categoryFadeBlurple-1j72_A {
+  background-color: rgba($colorHighlight, 0.8) !important;
+}
+
+//  toolbar
+.toolbar-2bjZV7 {
+  background-color: $bg !important;
+}
+
+//  tooltips
+.theme-dark .tooltipBrand-g03Nz8,
+.theme-light .tooltipBrand-g03Nz8 {
+  background-color: rgba($colorAccent, 0.95) !important;
+}
+
+.introductionAction-M1r6AX {
+  color: rgba($colorAccent, 0.8) !important;
+}
+
+.content-3O0wBS {
+  background: $bg !important;
+}
+
+.content-3O0wBS .button-3zdF3z {
+  color: $bg !important;
+}
+
+.theme-dark .tooltipBrand-g03Nz8 .tooltipPointer-3ZfirK,
+.theme-light .tooltipBrand-g03Nz8 .tooltipPointer-3ZfirK {
+  border-top-color: rgba($colorAccent, 0.95) !important;
+}
+
+//  settings menu
+.contentRegionScroller-26nc1e {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.sidebarRegionScroller-3MXcoP {
+  background: mix($color0, $color6, 90%) !important;
+}
+
+.cardPrimary-1Hv-to,
+.cardPrimaryEditable-3KtE4g {
+  border-color: $bg !important;
+}
+
+.themeDefault-24hCdX.valueChecked-m-4IJZ {
+  background-color: $colorAccent !important;
+}
+
+.theme-dark .codeRedemptionRedirect-1wVR4b {
+  background-color: mix($color0, $color6, 90%) !important;
+  border-color: mix($color0, $color6, 90%) !important;
+}
+
+.theme-dark .footer-3rDWdC {
+  background-color: $bg !important;
+}
+
+//  public server browser
+//  highlight
+.categoryPill-34fszg.selected-1dONk0 {
+  background-color: rgba($colorHighlight, 0.6) !important;
+}
+
+//  search panel
+.searchPage-3GKAdT .search-1iTphC {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.searchPage-3GKAdT .search-1iTphC .searchBox-2_mAlO:focus,
+.searchPage-3GKAdT .search-1iTphC .searchBox-2_mAlO:focus-within {
+  border-color: rgba($colorHighlight, 0.6) !important;
+}
+
+//  language panel
+.css-1b86x2o-control {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.css-9wh895-control {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.css-123uooi-menu {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+//  verified icon
+.verified-1eC5dy {
+  color: $colorHighlight !important;
+}
+
+// Syntax Highlighting
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-subst,
+.hljs-symbol {
+  color: $syntaxOne !important;
+}
+
+.hljs-built_in,
+.hljs-deletion {
+  color: $colorUrgent !important;
+}
+
+.hljs-addition,
+.hljs-keyword,
+.hljs-selector-tag {
+  color: $syntaxTwo !important;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-class .hljs-title,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: $syntaxThree !important;
+}
+
+.hljs-doctag,
+.hljs-literal,
+.hljs-meta .hljs-meta-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-string {
+  color: $colorAccent !important;
+}
+
+.hljs-name,
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-title {
+  color: $colorHighlight !important;
+}
+
+.codeBlockLang-O_f4hr {
+  color: rgba($syntaxOne, 0.7) !important;
+}
+
+/* .username_ec86aa { */
+/*   background-color: mix($color0, $color11, 80%); */
+/*   border-radius: 5px; */
+/*   padding: 3px; */
+/*   font-family: Rubik !important; */
+/*   color: $color12 !important; */
+/*   // border-bottom-right-radius: 10px; */
+/*   // border-bottom-left-radius: 10px; */
+/*   // padding-bottom: 3px; */
+/*   // padding-left: 5px; */
+/*   // padding-right: 5px; */
+/* } */
+
+// users
+// .username-h_Y3Us {
+// }
+.icon-2W8DHg {
+  display: none;
+}
+
+.iconContainer_d8bfb3 {
+  display: block;
+  color: $color7 !important;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>');
+}
+
+.linkTop-1W1aK6 {
+  color: $color9 !important;
+}
+
+.listItem-3SmSlK {
+  filter: blur(2px) brightness(1.2) contrast(0.7) sepia(1);
+  border: none;
+  //border-bottom: 4px solid $color2;
+  //filter: hue-rotate(10deg);
+}
+
+.listItem-3SmSlK:hover {
+  filter: brightness(1.2) contrast(0.7) sepia(0.1);
+  //filter: hue-rotate(10deg);
+  box-shadow: 0px 19px 57px 11px rgba(0, 0, 0, 0.3);
+  border-radius: 120px;
+}
+
+.wrapper-3kah-n {
+  transition:
+    $color1 0.4s ease-out,
+    $color5 0.4s ease-out;
+}
+
+//
+caption,
+cite,
+set,
+form,
+iframe,
+img,
+ins,
+kbd,
+label,
+amp,
+small,
+strike,
+table,
+tbody,
+tfoot,
+th,
+tr,
+tt,
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+
+  font-size: 100%;
+  color: WHITE !important;
+  vertical-align: baseline;
+}
+
+// span {
+//   filter: saturate(150%);
+// }
+// span{
+//    margin:0;
+//    padding:0;
+//    border:0;
+//    font-weight:inherit;
+//    font-style:inherit;
+//    font-family:inherit;
+//    font-size:100%;
+//    color: $color15 !important;
+//    vertical-align:baseline
+//}
+h1,
+h2,
+h5,
+h6,
+html {
+  font-size: 1em;
+  color: $color11 !important;
+  vertical-align: baseline;
+  // background-color: mix($color0, $color6, 70%);
+  border-radius: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+// channel names and other stuff
+div,
+strong,
+abbr,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+
+  font-size: 100%;
+  color: $color14 !important;
+  vertical-align: baseline;
+  font-weight: 300;
+  // text-shadow: $color1 0 0 4px, $color2 0 0 1px, $color5 0 0 1px;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+
+  font-size: 95%;
+  color: $color11 !important;
+  // background-color: $color2;
+  vertical-align: baseline;
+  font-weight: 300;
+  font-family: Rubik !important;
+  text-shadow:
+    $color1 0 0 4px,
+    $color2 0 0 1px,
+    $color5 0 0 1px;
+}
+
+code,
+dd,
+del,
+dfn,
+dl,
+dt,
+em,
+field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+
+  font-size: 100%;
+  color: $color15 !important;
+  vertical-align: baseline;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 400;
+  /* font-style: inherit; */
+  // font-family: Berkeley Mono Variable, monospace !important;
+  font-size: 0.92em !important;
+  color: $color15 !important;
+  vertical-align: baseline;
+  font-family: Rubik !important;
+}
+
+acronym,
+address,
+applet,
+big,
+blockquote,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+
+  font-size: 100%;
+  color: $color11 !important;
+  vertical-align: baseline;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a img {
+  border: none;
+}
+
+.contextMenuContainer-1RO4DQ {
+  background-color: $color2;
+}
+
+.contextMenuNub-NuTZ_U {
+  background-color: $color2;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: $color6;
+}
+
+p {
+  margin: 14px 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+::-webkit-input-placeholder,
+input,
+select,
+textarea {
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+.message-2CShn3.selected-2LX7Jy,
+.mouse-mode.full-motion .message-2CShn3:hover {
+  background-color: var(--background-message-hover);
+  border-radius: 5px;
+  color: $color1;
+}
+
+.markup-eYLPri .emoji.jumboable {
+  width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  transition: 200ms cubic-bezier(0.2, 0.11, 0, 1);
+}
+
+.markup-eYLPri .emoji.jumboable:hover {
+  width: 10rem;
+  height: 10rem;
+  min-height: 10rem;
+  transition: 200ms cubic-bezier(0.2, 0.11, 0, 1);
+}
+
+.markup-eYLPri .emoji {
+  width: 1.375em;
+  height: 1.375em;
+  transition: 200ms cubic-bezier(0.2, 0.11, 0, 1);
+}
+
+.markup-eYLPri .emoji:hover {
+  width: 3em;
+  height: 3em;
+  transition: 200ms cubic-bezier(0.2, 0.11, 0, 1);
+}
+
+.menu_d90b3d {
+  background-color: mix($color0, $color6, 60%) !important;
+  border-radius: 5px;
+}
+
+// emoji picker
+
+.drawerSizingWrapper__08434 {
+  background-color: rgba(mix($color0, $color6, 60%), 0.6) !important;
+  border-radius: 5px;
+}
+
+.flexible-3B4jwn {
+  background-color: mix($color0, $color6, 60%) !important;
+  border-radius: 5px;
+}
+
+.contextMenu-1LsNXB {
+  background-color: mix($color0, $color6, 60%);
+  border-radius: 5px;
+}
+
+.buttonContainer-30ix0s {
+  background-color: mix($color9, $color1, 50%);
+  border-radius: 5px;
+}
+
+.animatorTop-3DwSmU {
+  background-color: ($color0, $color6, 50%) !important;
+  border-radius: 5px;
+}
+
+.animatorRight__f88ae3 {
+  background-color: mix($color9, $color1, 70%) !important;
+  border-radius: 5px;
+}
+
+.contentWrapper-3vHNP2 {
+  background-color: mix($color1, $color9, 90%);
+}
+
+div.bodywrapper-1eSOtw {
+  background-color: mix($color1, $color9, 90%);
+}
+
+section.contentWrapper-2f9yME {
+  background-color: $color6;
+  opacity: 0.8;
+}
+
+div.wrapper-22rqw6 {
+  background-color: mix($color0, $color6, 90%);
+}
+
+div.contentWrapper_e0bb2c {
+  background-color: mix($color0, $color6, 90%);
+}
+
+// message-username-1166843237848338513
+/* .username_d30d99 { */
+/*   background-color: mix($color0, $color7, 90%); */
+/*   border-bottom-right-radius: 50px; */
+/*   padding: 3px; */
+/*   font-family: Rubik !important; */
+/*   color: $color12 !important; */
+/* } */
+
+.wrapper__66cd5 {
+  background-color: mix($color0, $color6, 90%);
+}
+
+.focusLock__10aa5 {
+  background-color: mix($color0, $color6, 75%);
+  border-radius: 5px;
+}
+
+.animatorRight_f88ae3 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+div.reactionTooltip__9384a {
+  background-color: mix($color0, $color6, 90%);
+  border-radius: 5px;
+}
+
+.markup_a7e664 .inline {
+  color: $color12 !important;
+  font-family: Rubik !important;
+  font-weight: 200;
+  text-shadow:
+    $color1 0 0 4px,
+    $color2 0 0 1px,
+    $color5 0 0 1px;
+}
+
+.markup_a7e664 code {
+  color: $color5 !important;
+  background-color: $color1;
+  font-family: Rubik !important;
+  font-weight: 200;
+  text-shadow:
+    $color1 0 0 4px,
+    $color2 0 0 1px,
+    $color5 0 0 1px;
+}
+
+.chatTarget__0ea5e {
+  background-color: mix($color0, $color6, 75%) !important;
+}
+
+.tooltipPrimary_e5c00d {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.userProfileInnerThemedNonPremium__3d0a6 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+// react submenu background 1-30-25
+.menu_c1e9c4 {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.cozy_f5c119 .contents_d3ae0d {
+  color: $color0 !important;
+}
+
+.cozy_c19a55 .headerText_c19a55 {
+  background-color: mix($color0, $color6, 70%) !important;
+  border-radius: 5px;
+  padding: 3px;
+  font-family: Rubik !important;
+  color: $color12 !important;
+}
+
+// reactions popout from menu 1-30-25
+.wrapper_c0e32c {
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.animatorLeft_f88ae3 {
+  border-radius: 5px;
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+// block around focused images
+.focusLock_f9a4c9 {
+  border-radius: 5px;
+  background-color: transparent !important;
+}
+
+.reactionTooltip_b49891 {
+  border-radius: 5px;
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.tooltip_b6c360 {
+  border-radius: 5px;
+  background-color: mix($color0, $color6, 90%) !important;
+}
+
+.popout_174.theme-dark.layer__6b5c3 {
+  background-color: $color0 !important;
+}
+
+.popout_668 {
+  background-color: $color0 !important;
+}
+
+.full-motion .translate__02873.didRender__7e24c {
+  background-color: $color0 !important;
+  background-color: var(--background-message-hover);
+  border-radius: 5px;
+}
+
+.fade_d2e09a {
+  background-color: mix($color6, $color0, 60%) !important;
+  border-radius: 20px;
+}
+
+.tooltipPrimary__51b23 {
+  border-radius: 20px;
+  background-color: $color0 !important;
+}
+
+.recentMentionsPopout__40c54 {
+  background-color: mix($color3, $color0, 20%) !important;
+}
+
+.wrapper_ef319f {
+  background-color: mix($color9, $color0, 10%) !important;
+}
+
+.username_f9f2ca {
+  background-color: mix($color0, $color11, 75%) !important;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 13px !important;
+  font-family: Rubik !important;
+  color: $color12 !important;
+}
+
+.header_b385c8 {
+  height: 15px;
+  background-color: mix($color0, $color7, 85%) !important;
+  /* -webkit-backdrop-filter: blur(8px); */
+  /* backdrop-filter: blur (8px); */
+  /* transition: width 0.7s; */
+  /* filter: blur(2px); */
+}
+
+/* .header_b385c8:hover { */
+/*   height: 30px; */
+/*   /* background-color: rgba(80, 80, 80, 0.8) !important; */
+/*   /* -webkit-backdrop-filter: blur(8px); */
+/*   /* backdrop-filter: blur (8px); */
+/*   /* transition: width 0.7s; */
+/*   /* filter: blur(8px) */
+/* } */
+
+.recentMentionsPopout_ddb5b4 {
+  background-color: mix($color0, $color7, 85%) !important;
+  /* background-color: rgba(30, 30, 30, 0.4) !important; */
+  /* -webkit-backdrop-filter: blur(8px); */
+  /* backdrop-filter: blur (8px); */
+}
+
+.name_d8bfb3 {
+  font-size: 14px !important;
+}
