@@ -1,5 +1,8 @@
 # Thorn
 
+https://github.com/user-attachments/assets/310db609-052f-4a53-a6ee-94c20ec6bc21
+
+
 My personal Quickshell config, optimized for productivity and focus.
 
 Still working on a decent enough install script.
