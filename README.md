@@ -2,6 +2,10 @@
 
 My personal Quickshell config, optimized for productivity and focus.
 
+
+https://github.com/user-attachments/assets/118c47d4-c6ca-41b3-8fe9-6aac501a1c41
+
+
 Still working on a decent enough install script.
 
 ## Features
