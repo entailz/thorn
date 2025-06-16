@@ -87,16 +87,6 @@ Rectangle {
                 onEntered: sortIcon.opacity = 1.0
                 onExited: sortIcon.opacity = 0.7
             }
-            ToolTip {
-                visible: parent.parent.hovered
-                text: {
-                    if (Service.RunnerAppModel.sortMode === "name")
-                        return "Sort: Name";
-                    if (Service.RunnerAppModel.sortMode === "category")
-                        return "Sort: Category";
-                    return "Sort: Recent";
-                }
-            }
         }
 
         Item {

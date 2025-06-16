@@ -666,7 +666,7 @@ Item {
                                             Repeater {
                                                 model: 7
                                                 delegate: Rectangle {
-                                                    width: (parent.parent.width - 38) / 7
+                                                    width: (contentColumn.width - 38) / 7
                                                     height: parent.height
                                                     color: "transparent"
                                                     border.color: "#33" + Globals.colors.colors.color2
@@ -869,6 +869,7 @@ Item {
                                     Repeater {
                                         model: 7
                                         delegate: Item {
+                                            id: eventsDay
                                             x: 70 + index * ((parent.width - 38) / 7)
                                             width: (parent.width - 40) / 7
                                             height: parent.height
@@ -1000,9 +1001,9 @@ Item {
                                                         }
 
                                                         onClicked: {
-                                                            let eventDate = parent.parent.columnDate;
+                                                            let eventDate = eventsDay.columnDate;
                                                             if (modelData.isMultiDaySegment && !modelData.isFirstSegment) {
-                                                                eventDate = new Date(parent.parent.columnDate);
+                                                                eventDate = new Date(eventsDay.columnDate);
                                                                 eventDate.setDate(eventDate.getDate() - 1);
                                                             }
 
@@ -1011,9 +1012,9 @@ Item {
                                                         }
 
                                                         onDoubleClicked: {
-                                                            let eventDate = parent.parent.columnDate;
+                                                            let eventDate = eventsDay.columnDate;
                                                             if (modelData.isMultiDaySegment && !modelData.isFirstSegment) {
-                                                                eventDate = new Date(parent.parent.columnDate);
+                                                                eventDate = new Date(eventsDay.columnDate);
                                                                 eventDate.setDate(eventDate.getDate() - 1);
                                                             }
 

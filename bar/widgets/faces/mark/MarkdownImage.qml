@@ -159,7 +159,7 @@ Item {
                     font.family: Globals.font
                     font.pixelSize: 10
                     elide: Text.ElideMiddle
-                    width: parent.parent.width - 20
+                    width: root.maxWidth - 20
                 }
             }
         }
