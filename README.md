@@ -27,11 +27,12 @@ with QSB. Firstly, remove all baked shaders that end in .qsb in ./shaders,
 then enter the shaders/src directory. Compile the shaders:
    - Bash & Zsh: `for shader in *.frag; do qsb --qt6 "$shader" -o "../$shader.qsb"; done`
    - Fish: `for shader in *.frag; qsb --qt6 "$shader" -o "../$shader.qsb"; end`
-5. Vesktop/Vencord: Make sure wal-vesktop is cloned somewhere (just a bash script).
-Add the path of script to Globals.qml's walVesktop property. Run
-`./wal-discord -u` for setup, scroll down to Themes in Vencord/Vesktop, enable
-thorn_discord.theme. Changing wallpaper should modify the color palette of
-discord theme.
+5. Vesktop/Vencord: Make sure wal-vesktop is cloned somewhere. Add the path
+of script to Globals.qml's walVesktop property. Run `./wal-discord -u` for
+setup, scroll down to Themes in Vencord/Vesktop settings, enable
+thorn_discord.theme, navigate to Vencord in settings and "Enable window
+transparency". Changing wallpaper should modify the color palette of discord
+theme.
 
 ## Features
 
