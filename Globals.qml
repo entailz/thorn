@@ -6,11 +6,12 @@ import Quickshell.Io
 Singleton {
     id: root
     readonly property bool vertical: false
-    readonly property string notePath: homeDir + "/notes/bar"
+    readonly property string notePath: Qt.resolvedUrl(homeDir + "/notes/bar")
     property var date: new Date()
     readonly property string font: "Readex Pro"
     readonly property bool toolTip: true
-    readonly property color backgroundColor: "#" + colors.colors.color0
+    readonly property string imageFolder: Qt.resolvedUrl(homeDir + "/paper")
+    readonly property color backgroundColor: "#BB" + colors.colors.color0
     readonly property string secondaryFont: "Rubik"
     readonly property var popupContext: PopupContext {}
     // envs
@@ -48,7 +49,7 @@ Singleton {
         property bool colorsLoaded: false
 
         property FileView colorFile: FileView {
-            path: Qt.resolvedUrl(root.homeDir + "/.config/quickshell/thorn/colors-qs.json")
+            path: Qt.resolvedUrl(root.homeDir + "/.config/quickshell/qsw/colors-qs.json")
             preload: true
             watchChanges: true
             onFileChanged: {

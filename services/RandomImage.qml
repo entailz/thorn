@@ -1,58 +1,46 @@
 pragma Singleton
 import QtQuick
 import Quickshell
-import Quickshell.Io
+import Qt.labs.folderlistmodel
 import "root:/"
 
 Singleton {
     id: root
-    readonly property string jsonPath: Globals.homeDir + "/paper/output.json"
+
+    readonly property string imageFolderPath: Globals.imageFolder
+
     property var imagePaths: []
-    property var jsonData: null
     property var imageData: ({})
     property bool preventWallpaperChange: false
     property bool isInitialLoad: true
-    property var origin: ""
+    property string currentPalette: "all"
+    property var origin: "0.5, 0.5"
 
     signal randomImageSelected(string imagePath)
+    signal imagesChanged
+    signal reloadTriggered
+
     readonly property var getRandomImage: function () {
-        if (imagePaths.length === 0) {
+        const filteredPaths = getFilteredPaths();
+        if (filteredPaths.length === 0) {
             return "";
         }
-        const randomImage = imagePaths[Math.floor(Math.random() * imagePaths.length)];
+        const randomImage = filteredPaths[Math.floor(Math.random() * filteredPaths.length)];
         return randomImage;
     }
 
-    property FileView jsonFile
-    signal reloadTriggered
-    signal imagesChanged
-    signal fileReload
-
-    function parseJson() {
-        if (!jsonFile.loaded) {
-            return;
+    function getFilteredPaths() {
+        if (currentPalette === "all") {
+            return imagePaths;
         }
-        try {
-            jsonData = JSON.parse(jsonFile.text());
-            imagePaths = [];
-            imageData = {};
-            if (jsonData.images && Object.keys(jsonData.images).length > 0) {
-                for (let key in jsonData.images) {
-                    if (jsonData.images[key].path) {
-                        imagePaths.push(jsonData.images[key].path);
-                        imageData[key] = jsonData.images[key];
-                    }
-                }
-            }
 
-            imagesChanged();
-
-            if (isInitialLoad) {
-                isInitialLoad = false;
+        const filtered = [];
+        for (let key in imageData) {
+            if (imageData[key].palette === currentPalette) {
+                filtered.push(imageData[key].path);
             }
-        } catch (e) {
-            console.error("Error parsing JSON:", e);
         }
+        return filtered;
     }
 
     function selectRandomImage() {
@@ -64,53 +52,62 @@ Singleton {
             return "";
         }
     }
+
     function addImageToJson(imagePath, palette) {
-        let currentContent = jsonFile.text().trim();
-        if (!currentContent)
-            currentContent = '{"images":{}}';
-        try {
-            let jsonData = JSON.parse(currentContent);
-            let imageName = imagePath.split('/').pop().split('.')[0];
-            if (!jsonData.images[imageName]) {
-                jsonData.images[imageName] = {
-                    "path": imagePath,
-                    "palette": palette
-                };
-                let updatedContent = JSON.stringify(jsonData, null, 4);
-                if (updatedContent !== currentContent) {
-                    preventWallpaperChange = true;
-                    jsonFile.setText(updatedContent);
-                }
-            }
-        } catch (e) {
-            console.error("Error parsing JSON:", e);
+        let imageName = imagePath.split('/').pop().split('.')[0];
+        imageData[imageName] = {
+            "path": imagePath,
+            "palette": palette || "default"
+        };
+
+        if (!imagePaths.includes(imagePath)) {
+            imagePaths.push(imagePath);
+            imagesChanged();
         }
     }
 
-    Component.onCompleted: {
-        parseJson();
-    }
+    FolderListModel {
+        id: folderModel
+        folder: Qt.resolvedUrl(root.imageFolderPath)
+        nameFilters: ["*.jpg", "*.jpeg", "*.png", "*.webp", "*.bmp", "*.gif"]
+        sortField: FolderListModel.Name
 
-    jsonFile: FileView {
-        id: files
-        path: root.jsonPath
-        blockLoading: false
-        watchChanges: true
-        atomicWrites: true
-        printErrors: true
-        preload: true
-        onTextChanged: {
-            if (loaded) {
-                const shouldPrevent = root.preventWallpaperChange;
-                root.parseJson();
-                if (shouldPrevent) {
-                    return;
-                }
-
-                if (!root.isInitialLoad) {
-                    root.selectRandomImage();
-                }
+        onStatusChanged: {
+            if (status === FolderListModel.Ready) {
+                loadImagesFromFolder();
             }
         }
+    }
+
+    function loadImagesFromFolder() {
+        imagePaths = [];
+        imageData = {};
+
+        for (let i = 0; i < folderModel.count; i++) {
+            const fileUrl = folderModel.get(i, "fileUrl").toString();
+            const fileName = folderModel.get(i, "fileName");
+            const filePath = fileUrl.replace("file://", "");
+
+            imagePaths.push(filePath);
+
+            const imageName = fileName.split('.')[0];
+            imageData[imageName] = {
+                "path": filePath
+                // add palettes back at some point when i add lutgen generator
+                // "palette": "default"
+            };
+        }
+
+        imagesChanged();
+
+        if (isInitialLoad) {
+            isInitialLoad = false;
+        }
+    }
+
+    function reloadImages() {
+        folderModel.folder = "";
+        folderModel.folder = Qt.resolvedUrl(root.imageFolderPath);
+        reloadTriggered();
     }
 }
