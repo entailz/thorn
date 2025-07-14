@@ -18,7 +18,7 @@ Variants {
         screen: modelData
         property color backgroundColor: Globals.backgroundColor
 
-        WlrLayershell.namespace: "barz"
+        WlrLayershell.namespace: "thorn"
         // WlrLayershell.layer: WlrLayer.Top
         // exclusionMode: ExclusionMode.Normal
 

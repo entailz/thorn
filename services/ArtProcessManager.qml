@@ -22,10 +22,10 @@ Item {
         return nameWithoutExtension + "_" + randomSuffix + "." + extension;
     }
 
-    function checkAndStartLutgen() {
-        if (root.palette && root.palette !== "" && root.tenimage && root.tenimage !== "")
-            lutgen.running = true;
-    }
+    // function checkAndStartLutgen() {
+    //     if (root.palette && root.palette !== "" && root.tenimage && root.tenimage !== "")
+    //         lutgen.running = true;
+    // }
 
     Process {
         id: wal
@@ -45,24 +45,24 @@ Item {
         id: disc
 
         running: false
-        command: [Globals.homeDir + "/wal-discord/wal-discord", "-t", "-b", "haishoku"]
+        command: [Globals.walVesktop, "-t", "-b", "haishoku"]
     }
 
-    Process {
-        id: lutgen
-
-        running: false
-        command: ["lutgen", "apply", "-p", root.palette, root.tenimage, "-l", "16", "-o", Globals.homeDir + "/paper/luts/" + root.getImageName(root.tenimage)]
-        Component.onCompleted: {
-            root.paletteChanged.connect(root.checkAndStartLutgen);
-        }
-        onRunningChanged: {
-            if (!running) {
-                let newImagePath = Globals.homeDir + "/paper/luts/" + root.getImageName(root.tenimage);
-                RandomImage.addImageToJson(newImagePath, root.palette);
-            }
-        }
-    }
+    // Process {
+    //     id: lutgen
+    //
+    //     running: false
+    //     command: ["lutgen", "apply", "-p", root.palette, root.tenimage, "-l", "16", "-o", Globals.homeDir + "/paper/luts/" + root.getImageName(root.tenimage)]
+    //     Component.onCompleted: {
+    //         root.paletteChanged.connect(root.checkAndStartLutgen);
+    //     }
+    //     onRunningChanged: {
+    //         if (!running) {
+    //             let newImagePath = Globals.homeDir + "/paper/luts/" + root.getImageName(root.tenimage);
+    //             RandomImage.addImageToJson(newImagePath, root.palette);
+    //         }
+    //     }
+    // }
 
     Timer {
         id: timer

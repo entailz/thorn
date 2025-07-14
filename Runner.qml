@@ -22,7 +22,7 @@ PanelWindow {
     color: "transparent"
     exclusionMode: ExclusionMode.Normal
     WlrLayershell.layer: WlrLayer.Overlay
-    WlrLayershell.namespace: "qslaunch"
+    WlrLayershell.namespace: "thornrun"
 
     anchors {
         top: true

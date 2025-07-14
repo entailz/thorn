@@ -18,7 +18,7 @@ Variants {
         property int dragTargetWorkspace: -1
         property bool isHovered: false
 
-        WlrLayershell.namespace: "barz"
+        WlrLayershell.namespace: "thorn"
 
         exclusionMode: ExclusionMode.Ignore
         color: "transparent"

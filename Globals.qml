@@ -10,6 +10,7 @@ Singleton {
     property var date: new Date()
     readonly property string font: "Readex Pro"
     readonly property bool toolTip: true
+    readonly property string walVesktop: Qt.resolvedUrl(homeDir + "/.src/wal-vesktop/wal-discord")
     readonly property string imageFolder: Qt.resolvedUrl(homeDir + "/paper")
     readonly property color backgroundColor: "#BB" + colors.colors.color0
     readonly property string secondaryFont: "Rubik"
@@ -49,7 +50,7 @@ Singleton {
         property bool colorsLoaded: false
 
         property FileView colorFile: FileView {
-            path: Qt.resolvedUrl(root.homeDir + "/.config/quickshell/qsw/colors-qs.json")
+            path: Qt.resolvedUrl(root.homeDir + "/.config/quickshell/thorn/colors-qs.json")
             preload: true
             watchChanges: true
             onFileChanged: {
