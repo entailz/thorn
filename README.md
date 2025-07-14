@@ -14,7 +14,7 @@ If you would like to try this shell out, and have deps installed:
 1. Pywal: Add the colors-qs.json file in scripts to your pywal templates,
 run `wal -e -i image.jpg --saturate 0.2 --backend haishoku` to generate
 colors from templates and check if deps are properly installed
-(image.jpg can be any image). Make a symlink for ~/.cache/colors-qs.json in
+(image.jpg can be any image). Make a symlink for ~/.cache/wal/colors-qs.json in
 Thorn's `"root:/"`, replacing the static colors-qs.json that is currently
 in there.
 2. Fonts & Wallpaper Folder: See Globals.qml, replace font and secondaryFont
