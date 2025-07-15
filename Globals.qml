@@ -15,7 +15,6 @@ Singleton {
     readonly property color backgroundColor: "#BB" + colors.colors.color0
     readonly property string secondaryFont: "Rubik"
     readonly property var popupContext: PopupContext {}
-    // envs
     readonly property string homeDir: Quickshell.env("HOME")
     readonly property string cacheDir: Quickshell.env("XDG_CACHE_HOME")
 

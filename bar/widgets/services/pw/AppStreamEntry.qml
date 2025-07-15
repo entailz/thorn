@@ -76,22 +76,22 @@ Rectangle {
         const mediaName = (stream.properties["media.name"] || "").toLowerCase().trim();
 
         if (mediaName.includes("zen") || appName.includes("zen")) {
-            return "../icons/zen_dark.png";
+            return "../../icons/zen_dark.png";
         }
         if (mediaName.includes("youtube") || appName.includes("youtube")) {
-            return "../icons/youtube.png";
+            return "../../icons/youtube.png";
         }
         if (mediaName.includes("spotify") || appName.includes("spotify")) {
-            return "../icons/spotify.png";
+            return "../../icons/spotify.png";
         }
         if (mediaName.includes("twitch") || appName.includes("twitch")) {
-            return "../icons/twitch.png";
+            return "../../icons/twitch.png";
         }
         if (mediaName.includes("soundcloud") || appName.includes("soundcloud")) {
-            return "../icons/soundcloud.png";
+            return "../../icons/soundcloud.png";
         }
         if (mediaName.includes("firefox") || appName.includes("firefox")) {
-            return "../icons/firefox.png";
+            return "../../icons/firefox.png";
         }
 
         if (iconName && !appName.includes("firefox")) {
