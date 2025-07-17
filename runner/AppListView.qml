@@ -2,7 +2,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 import QtQuick.Layouts
-import "root:/"
+import qs
 import "../services" as Service
 
 ListView {

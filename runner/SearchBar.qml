@@ -5,7 +5,7 @@ import QtQuick.Layouts
 import Quickshell.Widgets
 import QtQuick.Controls
 import "../services" as Service
-import "root:/"
+import qs
 
 Rectangle {
     id: searchBar

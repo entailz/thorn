@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Widgets
-import "root:/"
+import qs
 
 LazyLoader {
     id: root

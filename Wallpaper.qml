@@ -57,10 +57,6 @@ Variants {
             ShaderEffect {
                 id: transitionEffect
                 anchors.fill: imageContainer
-                // property int direction: -1
-                // property vector2d resolution: Qt.vector2d(width, height)
-                // property real time: 20
-                // property real curlExtent: 0.5
                 property vector2d origin: Services.RandomImage.origin
                 property vector2d imageSize: currentImage.sourceSize
                 property var fromImage: currentImage

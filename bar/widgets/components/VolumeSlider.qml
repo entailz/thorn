@@ -4,7 +4,7 @@ import Quickshell.Widgets
 import QtQuick.Layouts
 import QtQuick
 import Quickshell
-import "root:/"
+import qs
 
 Rectangle {
     id: slider

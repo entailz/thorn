@@ -1,6 +1,6 @@
 import QtQuick
 import "services/record" as Service
-import "root:/"
+import qs
 import "components" as Components
 import QtQuick.Controls
 

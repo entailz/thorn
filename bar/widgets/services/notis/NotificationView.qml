@@ -5,7 +5,7 @@ import QtQuick.Controls
 import Quickshell.Widgets
 import Quickshell.Services.Notifications
 import "../../components" as Components
-import "root:/"
+import qs
 
 Rectangle {
     id: notificationRoot

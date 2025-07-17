@@ -3,7 +3,7 @@ import QtQuick
 import Quickshell.Io
 import Quickshell
 import Quickshell.Hyprland
-import "root:/"
+import qs
 
 Singleton {
     id: recorder

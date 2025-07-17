@@ -7,7 +7,7 @@ import Quickshell.Io
 import QtQuick.Controls
 import "components/pomodoro" as Pom
 import "components" as Components
-import "root:/"
+import qs
 
 Components.BarWidget {
     id: roots

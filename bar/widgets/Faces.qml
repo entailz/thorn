@@ -6,7 +6,7 @@ import QtQuick.Controls
 import Quickshell
 import Quickshell.Hyprland
 import "components" as Components
-import "root:/"
+import qs
 import "faces" as Mark
 
 Components.BarWidget {

@@ -2,7 +2,7 @@ pragma Singleton
 import QtQuick
 import Quickshell.Io
 import Quickshell
-import "root:/"
+import qs
 
 Singleton {
     id: noteSaver

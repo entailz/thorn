@@ -2,7 +2,7 @@ pragma Singleton
 import QtQuick
 import Quickshell.Io
 import Quickshell
-import "root:/"
+import qs
 
 Singleton {
     id: root
@@ -20,7 +20,6 @@ Singleton {
         adapter: JsonAdapter {
             id: adapter
             property var apps: ({})
-            property int totalLaunches: 0
             property string lastUpdateTime: ""
             onAppsChanged: root.dataReady = true
         }
@@ -28,7 +27,6 @@ Singleton {
         onLoadFailed: function (error) {
             if (error.code === FileViewError.FileNotFound) {
                 adapter.apps = {};
-                adapter.totalLaunches = 0;
                 adapter.lastUpdateTime = new Date().toISOString();
                 writeAdapter();
             }
@@ -47,7 +45,6 @@ Singleton {
         var apps = frequencyFile.adapter.apps || {};
         apps[appName] = (apps[appName] || 0) + 1;
         frequencyFile.adapter.apps = apps;
-        frequencyFile.adapter.totalLaunches++;
         frequencyFile.adapter.lastUpdateTime = new Date().toISOString();
     }
 

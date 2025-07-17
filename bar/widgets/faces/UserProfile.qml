@@ -1,6 +1,6 @@
 pragma Singleton
 import QtQuick
-import "root:/"
+import qs
 
 QtObject {
     id: userProfile

@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import Quickshell.Widgets
-import "root:/"
+import qs
 
 ItemDelegate {
     id: itemDelegate

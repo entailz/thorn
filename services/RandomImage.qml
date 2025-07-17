@@ -2,7 +2,7 @@ pragma Singleton
 import QtQuick
 import Quickshell
 import Qt.labs.folderlistmodel
-import "root:/"
+import qs
 
 Singleton {
     id: root
@@ -87,6 +87,11 @@ Singleton {
             const fileUrl = folderModel.get(i, "fileUrl").toString();
             const fileName = folderModel.get(i, "fileName");
             const filePath = fileUrl.replace("file://", "");
+            const isDir = folderModel.get(i, "fileIsDir");
+
+            if (isDir) {
+                continue;
+            }
 
             imagePaths.push(filePath);
 

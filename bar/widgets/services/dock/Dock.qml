@@ -4,7 +4,7 @@ import Quickshell.Hyprland
 import Quickshell.Wayland
 import QtQuick
 import Qt5Compat.GraphicalEffects
-import "root:/"
+import qs
 
 Variants {
     model: Quickshell.screens

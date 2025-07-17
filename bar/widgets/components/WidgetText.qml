@@ -1,5 +1,5 @@
 import QtQuick
-import "root:/"
+import qs
 
 Rectangle {
     width: 200

@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-import "root:/"
+import qs
 
 Button {
     property string iconName

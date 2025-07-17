@@ -1,5 +1,5 @@
 import QtQuick
-import "root:/"
+import qs
 import QtQuick.Controls
 
 Item {

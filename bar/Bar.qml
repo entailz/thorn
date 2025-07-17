@@ -5,7 +5,7 @@ import Qt5Compat.GraphicalEffects
 // import "widgets/notis" as Notis
 import Quickshell.Wayland
 import "widgets" as Widgets
-import "root:/"
+import qs
 
 Variants {
     model: Quickshell.screens

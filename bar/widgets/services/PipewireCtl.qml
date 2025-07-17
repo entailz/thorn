@@ -4,7 +4,7 @@ import QtQuick.Controls
 import Quickshell.Services.Pipewire
 import "pw" as Pw
 import "visualizer" as Viz
-import "root:/"
+import qs
 
 Item {
     id: root

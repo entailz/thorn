@@ -1,6 +1,6 @@
 import QtQuick
 import Quickshell
-import "root:/"
+import qs
 
 PanelWindow {
     id: slurpWindow

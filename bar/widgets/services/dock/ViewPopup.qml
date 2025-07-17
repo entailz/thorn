@@ -3,7 +3,7 @@ import QtQuick
 import Quickshell.Wayland
 import QtQuick.Controls
 import Qt5Compat.GraphicalEffects
-import "root:/"
+import qs
 
 PopupWindow {
     id: root

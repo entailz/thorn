@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 import Quickshell.Widgets
-import "root:/"
+import qs
 
 Rectangle {
     id: root

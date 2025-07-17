@@ -9,7 +9,7 @@ import "components" as Components
 import "services/osd" as OSDInterface
 import "services/notis" as Notis
 import "services/cal" as Cal
-import "root:/"
+import qs
 
 Components.BarWidget {
     id: roots
@@ -289,7 +289,6 @@ Components.BarWidget {
                         id: calendarComponent
                         Layout.preferredWidth: 500
                         Layout.preferredHeight: 350
-                        colors: roots.colors
                         selectedDate: roots.selectedDate
                     }
 

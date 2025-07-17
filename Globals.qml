@@ -92,6 +92,5 @@ Singleton {
 
     Component.onCompleted: {
         colorManager.reloadColors();
-        // Hyprland.dispatch("mkdir -p " + root.homeDir + "hio");
     }
 }

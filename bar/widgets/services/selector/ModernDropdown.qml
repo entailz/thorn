@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 import "../../components" as Components
-import "root:/"
+import qs
 
 Control {
     id: dropdown

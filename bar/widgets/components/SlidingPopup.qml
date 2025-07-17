@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell
 import Qt5Compat.GraphicalEffects
-import "root:/"
+import qs
 
 PopupWindow {
     id: root

@@ -4,7 +4,7 @@ import Quickshell
 import Quickshell.Widgets
 import Qt5Compat.GraphicalEffects
 import Quickshell.Services.Pipewire
-import "root:/"
+import qs
 import "../../components" as Components
 
 PopupWindow {

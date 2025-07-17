@@ -8,7 +8,7 @@ import Quickshell.Hyprland
 import Quickshell.Services.SystemTray
 import Quickshell.Widgets
 import "components" as Components
-import "root:/"
+import qs
 
 Components.BarWidget {
     id: sysTray

@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import Quickshell.Services.Pipewire
 import "../components" as Components
-import "root:/"
+import qs
 
 Item {
     id: dropdown

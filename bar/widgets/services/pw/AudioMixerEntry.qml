@@ -5,7 +5,7 @@ import QtQuick.Layouts
 import "../../components" as Components
 import QtQuick.Controls
 import Quickshell.Widgets
-import "root:/"
+import qs
 
 Rectangle {
     property PwNode audioNode: null

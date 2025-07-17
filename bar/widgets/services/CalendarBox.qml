@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
-import "root:/" // for Globals
+import qs // for Globals
 
 Item {
     id: calendarRoot

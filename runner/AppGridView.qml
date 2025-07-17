@@ -1,7 +1,7 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
-import "root:/"
+import qs
 import "../services" as Service
 
 GridView {

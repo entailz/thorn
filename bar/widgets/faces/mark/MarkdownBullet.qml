@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
-import "root:/"
+import qs
 
 Item {
     id: root

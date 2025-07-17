@@ -1,6 +1,6 @@
 import QtQuick.Controls
 import QtQuick
-import "root:/"
+import qs
 
 Button {
     property bool primary: false

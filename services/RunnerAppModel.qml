@@ -2,7 +2,7 @@ pragma Singleton
 pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
-import "root:/"
+import qs
 
 Singleton {
     id: appModelSingleton

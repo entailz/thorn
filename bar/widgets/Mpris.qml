@@ -1,4 +1,5 @@
 pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
@@ -9,7 +10,7 @@ import Quickshell.Widgets
 import Quickshell.Hyprland
 import Quickshell.Io
 import "components" as Components
-import "root:/"
+import qs
 
 Components.BarWidget {
     id: mprisd
@@ -695,8 +696,8 @@ Components.BarWidget {
                 id: unifiedIconButton
                 y: -3
                 x: -10
-                width: Globals.vertical ? verticalLayout.width + 15 : horizontalLayout.width + 15  
-                height: Globals.vertical ? verticalLayout.height + 10 : horizontalLayout.height + 10  
+                width: Globals.vertical ? verticalLayout.width + 15 : horizontalLayout.width + 15
+                height: Globals.vertical ? verticalLayout.height + 10 : horizontalLayout.height + 10
 
                 Rectangle {
                     id: hoverBackground

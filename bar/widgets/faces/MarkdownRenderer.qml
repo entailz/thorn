@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-import "root:/"
+import qs
 import "mark" as Md
 
 ScrollView {

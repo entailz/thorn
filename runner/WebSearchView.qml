@@ -1,6 +1,6 @@
 pragma ComponentBehavior: Bound
 import QtQuick
-import "root:/"
+import qs
 
 Column {
     spacing: 16

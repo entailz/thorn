@@ -1,6 +1,6 @@
 import QtQuick
 import Quickshell.Hyprland
-import "root:/"
+import qs
 import "components" as Components
 
 Components.BarWidget {

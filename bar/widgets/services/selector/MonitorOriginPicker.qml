@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell.Hyprland
 import "../../../../services" as Services
-import "root:/"
+import qs
 
 Rectangle {
     readonly property var monitor: Hyprland.monitors.values[0]

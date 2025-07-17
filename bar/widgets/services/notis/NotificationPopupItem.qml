@@ -3,7 +3,7 @@ import QtQuick.Layouts
 import Quickshell
 import Quickshell.Widgets
 import QtQuick.Effects
-import "root:/"
+import qs
 
 PopupWindow {
     id: notificationPopupWindow

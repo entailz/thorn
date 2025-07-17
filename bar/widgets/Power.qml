@@ -5,7 +5,7 @@ import Quickshell.Widgets
 import QtQuick.Controls
 import "components" as Components
 import "services/power" as Log
-import "root:/"
+import qs
 
 Components.BarWidget {
     id: root

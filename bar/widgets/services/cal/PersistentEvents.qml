@@ -5,32 +5,30 @@ import Quickshell.Io
 
 Singleton {
     id: root
-    property string cacheDir: Quickshell.env("XDG_CACHE_HOME") || (Quickshell.env("HOME") + "/.cache")
+    
+    readonly property string cacheDir: Quickshell.env("XDG_CACHE_HOME") || (Quickshell.env("HOME") + "/.cache")
     property var eventData: ({})
     property bool isReady: false
 
     FileView {
         id: plannerFile
         path: root.cacheDir + "/qs/planner-data.json"
-        adapter: JsonAdapter {}
 
         onLoaded: {
             try {
-                const data = JSON.parse(text());
-                if (data && typeof data === 'object') {
-                    eventData = data;
-                } else {
-                    eventData = {};
-                }
+                const data = JSON.parse(text())
+                root.eventData = (data && typeof data === 'object') ? data : {}
             } catch (e) {
-                eventData = {};
+                console.warn("Failed to parse planner data:", e)
+                root.eventData = {}
             }
-            isReady = true;
+            root.isReady = true
         }
 
         onLoadFailed: function (error) {
-            eventData = {};
-            isReady = true;
+            console.warn("Failed to load planner data:", error)
+            root.eventData = {}
+            root.isReady = true
         }
     }
 
@@ -41,43 +39,43 @@ Singleton {
     }
 
     function removeEvent(date, eventId) {
-        if (!isReady)
+        if (!root.isReady)
             return;
 
         const key = getDateKey(date);
-        if (eventData[key]) {
-            eventData[key] = eventData[key].filter(event => event.id !== eventId);
-            if (eventData[key].length === 0) {
-                delete eventData[key];
+        if (root.eventData[key]) {
+            root.eventData[key] = root.eventData[key].filter(event => event.id !== eventId);
+            if (root.eventData[key].length === 0) {
+                delete root.eventData[key];
             }
-            eventData = Object.assign({}, eventData);
+            root.eventData = Object.assign({}, root.eventData);
             saveEventData();
         }
     }
 
     function addEvent(date, event) {
-        if (!isReady)
+        if (!root.isReady)
             return;
 
-        if (!event.title || event.title.trim() === "" || event.title === "New Appointment") {
+        if (!event || !event.title || event.title.trim() === "" || event.title === "New Appointment") {
             return;
         }
 
         const key = getDateKey(date);
-        if (!eventData[key]) {
-            eventData[key] = [];
+        if (!root.eventData[key]) {
+            root.eventData[key] = [];
         }
-        eventData[key].push(event);
-        eventData = Object.assign({}, eventData);
+        root.eventData[key].push(event);
+        root.eventData = Object.assign({}, root.eventData);
         saveEventData();
     }
 
     function saveEventData() {
-        if (!isReady)
+        if (!root.isReady)
             return;
 
         try {
-            const jsonString = JSON.stringify(eventData, null, 2);
+            const jsonString = JSON.stringify(root.eventData, null, 2);
             plannerFile.setText(jsonString);
         } catch (e) {
             console.error("failed to save planner data:", e);
@@ -92,8 +90,9 @@ Singleton {
     }
 
     function getEventsForDate(date) {
+        if (!root.isReady) return [];
         const key = getDateKey(date);
-        return eventData[key] || [];
+        return root.eventData[key] || [];
     }
 
     function getAppointmentsForDateAndHour(date, hour) {

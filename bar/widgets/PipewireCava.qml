@@ -2,7 +2,7 @@ import QtQuick
 import Quickshell
 import QtQuick.Controls
 import "components" as Components
-import "root:/"
+import qs
 import "services" as Service
 
 Components.BarWidget {

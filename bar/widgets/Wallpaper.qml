@@ -5,7 +5,7 @@ import Quickshell.Hyprland
 import Quickshell.Widgets
 import Qt5Compat.GraphicalEffects
 import QtQuick.Layouts
-import "root:/"
+import qs
 import "components" as Components
 import "../../services" as Services
 import "services/selector" as Selector
