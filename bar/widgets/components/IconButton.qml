@@ -2,7 +2,7 @@ import QtQuick
 import Qt5Compat.GraphicalEffects
 import Quickshell
 import Quickshell.Widgets
-import qs
+import "root:/"
 
 Item {
     id: root
