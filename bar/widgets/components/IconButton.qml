@@ -2,7 +2,7 @@ import QtQuick
 import Qt5Compat.GraphicalEffects
 import Quickshell
 import Quickshell.Widgets
-import "root:/"
+import qs
 
 Item {
     id: root
@@ -96,7 +96,7 @@ Item {
             maskSource: IconImage {
                 mipmap: true
                 implicitSize: root.size
-                source: Quickshell.iconPath(root.icon)
+                source: root.useVariableFill ? "" : Quickshell.iconPath(root.icon)
                 opacity: root.enabled ? 1.0 : 0.5
                 smooth: true
             }
@@ -142,7 +142,7 @@ Item {
         id: unmaskedIcon
         visible: !root.useMask && !root.useVariableFill
         anchors.centerIn: parent
-        source: Quickshell.iconPath(root.icon)
+        source: root.useVariableFill ? "" : Quickshell.iconPath(root.icon)
         implicitSize: root.size
         opacity: root.enabled ? 1.0 : 0.5
 
