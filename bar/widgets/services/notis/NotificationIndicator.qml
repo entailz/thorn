@@ -1,5 +1,5 @@
 import QtQuick
-import qs
+import "root:/"
 
 Item {
     id: sparkleWrapper

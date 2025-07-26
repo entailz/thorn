@@ -1,7 +1,7 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell.Io
-import qs
+import "root:/"
 
 Item {
     id: root
@@ -12,33 +12,10 @@ Item {
 
     signal artChanged
 
-    function getImageName(path) {
-        var parts = path.split("/");
-        var baseName = parts[parts.length - 1];
-        var extension = baseName.split('.').pop();
-        var nameWithoutExtension = baseName.replace(/\.[^/.]+$/, '');
-        var randomSuffix = palette;
-
-        return nameWithoutExtension + "_" + randomSuffix + "." + extension;
-    }
-
-    // function checkAndStartLutgen() {
-    //     if (root.palette && root.palette !== "" && root.tenimage && root.tenimage !== "")
-    //         lutgen.running = true;
-    // }
-
     Process {
-        id: wal
-
+        id: walrus
         running: false
-        command: ["wal", "-q", "-e", "-i", root.imagePath, "--saturate", "0.14", "--backend", "haishoku"]
-    }
-
-    Process {
-        id: copyimage
-
-        running: false
-        command: ["cp", root.imagePath, Globals.homeDir + "/.cache/current_wallpaper.jpg"]
+        command: ["walrus", "-s", "0.14", root.imagePath]
     }
 
     Process {
@@ -48,40 +25,10 @@ Item {
         command: [Globals.walVesktop, "-t", "-b", "haishoku"]
     }
 
-    // Process {
-    //     id: lutgen
-    //
-    //     running: false
-    //     command: ["lutgen", "apply", "-p", root.palette, root.tenimage, "-l", "16", "-o", Globals.homeDir + "/paper/luts/" + root.getImageName(root.tenimage)]
-    //     Component.onCompleted: {
-    //         root.paletteChanged.connect(root.checkAndStartLutgen);
-    //     }
-    //     onRunningChanged: {
-    //         if (!running) {
-    //             let newImagePath = Globals.homeDir + "/paper/luts/" + root.getImageName(root.tenimage);
-    //             RandomImage.addImageToJson(newImagePath, root.palette);
-    //         }
-    //     }
-    // }
-
-    Timer {
-        id: timer
-
-        interval: 100
-        running: false
-        repeat: false
-        onTriggered: {
-            disc.running = true;
-        }
-    }
-
     Connections {
         function onArtChanged() {
-            timer.start();
-            // bar.running = true;
-            wal.running = true;
-            copyimage.running = true;
-            disc.running = false;
+            walrus.running = true;
+            disc.running = true;
         }
 
         target: root

@@ -7,6 +7,8 @@ Singleton {
     id: root
     readonly property bool vertical: false
     readonly property string notePath: Qt.resolvedUrl(homeDir + "/notes/bar")
+
+    property bool notificationsEnabled: true
     property var date: new Date()
     readonly property string font: "Readex Pro"
     readonly property bool toolTip: true

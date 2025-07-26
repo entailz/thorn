@@ -3,7 +3,8 @@ import QtQuick.Layouts
 import Quickshell
 import Quickshell.Widgets
 import QtQuick.Effects
-import qs
+import "root:/"
+import "../../components" as Components
 
 PopupWindow {
     id: notificationPopupWindow
@@ -232,6 +233,14 @@ PopupWindow {
                             fillMode: Image.PreserveAspectFit
                             visible: status === Image.Ready
                             cache: false
+
+                            onStatusChanged: {
+                                if (status === Image.Error) {
+                                    console.log("Failed to load icon: " + source);
+                                } else if (status === Image.Ready) {
+                                    console.log("Icon loaded successfully: " + source);
+                                }
+                            }
                         }
 
                         Text {

@@ -5,7 +5,7 @@ import QtQuick.Controls
 import Quickshell.Widgets
 import Quickshell.Services.Notifications
 import "../../components" as Components
-import qs
+import "root:/"
 
 Rectangle {
     id: notificationRoot
@@ -14,16 +14,20 @@ Rectangle {
     property var colors: ({})
     property var notificationServer: null
 
-    property bool notificationsEnabled: true
+    property bool notificationsEnabled: Globals.notificationsEnabled
     property bool isVisible: false
     property bool animationsTriggered: false
 
     function toggleNotifications() {
-        notificationsEnabled = !notificationsEnabled;
+        Globals.notificationsEnabled = !Globals.notificationsEnabled;
+        if (Globals.notificationsEnabled && notificationRoot.isVisible) {
+            animationsTriggered = false;
+            resetAnimationTimer.start();
+        }
     }
 
     onIsVisibleChanged: {
-        if (isVisible && notificationsEnabled) {
+        if (isVisible && Globals.notificationsEnabled) {
             animationsTriggered = false;
             resetAnimationTimer.start();
         } else {
@@ -104,8 +108,8 @@ Rectangle {
                     width: 60
                     height: 24
                     radius: 14
-                    color: notificationsEnabled ? "#40" + Globals.colors.colors.color2 : "#40404040"
-                    border.color: notificationsEnabled ? "#" + Globals.colors.colors.color2 : "#606060"
+                    color: Globals.notificationsEnabled ? "#40" + Globals.colors.colors.color2 : "#40404040"
+                    border.color: Globals.notificationsEnabled ? "#" + Globals.colors.colors.color2 : "#606060"
                     border.width: 1
 
                     Rectangle {
@@ -113,9 +117,9 @@ Rectangle {
                         width: 20
                         height: 18
                         radius: 10
-                        color: notificationsEnabled ? "#" + Globals.colors.colors.color2 : "#808080"
+                        color: Globals.notificationsEnabled ? "#" + Globals.colors.colors.color2 : "#808080"
                         anchors.verticalCenter: parent.verticalCenter
-                        x: notificationsEnabled ? parent.width - width - 3 : 3
+                        x: Globals.notificationsEnabled ? parent.width - width - 3 : 3
 
                         Behavior on x {
                             SmoothedAnimation {
@@ -133,7 +137,7 @@ Rectangle {
 
                     Text {
                         anchors.centerIn: parent
-                        text: notificationsEnabled ? "ON" : "OFF"
+                        text: Globals.notificationsEnabled ? "ON" : "OFF"
                         color: "#" + Globals.colors.colors.color2
                         font.pixelSize: 9
                         font.bold: true
@@ -153,7 +157,7 @@ Rectangle {
         Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            visible: !notificationsEnabled
+            visible: !Globals.notificationsEnabled
 
             ColumnLayout {
                 anchors.centerIn: parent
@@ -196,7 +200,7 @@ Rectangle {
             Layout.fillHeight: true
             spacing: 8
             clip: true
-            visible: notificationsEnabled
+            visible: Globals.notificationsEnabled
 
             Item {
                 id: noNotificationsState
